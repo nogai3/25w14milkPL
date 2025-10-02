@@ -1044,9 +1044,9 @@ Application::Application(int& argc, char** argv) : QApplication(argc, argv)
 
     // check update locks
     {
-        auto update_log_path = FS::PathCombine(m_dataPath, "logs", "prism_launcher_update.log");
+        auto update_log_path = FS::PathCombine(m_dataPath, "logs", "25w14milk_launcher.log");
 
-        auto update_lock = QFileInfo(FS::PathCombine(m_dataPath, ".prism_launcher_update.lock"));
+        auto update_lock = QFileInfo(FS::PathCombine(m_dataPath, ".25w14milk_launcher_update.lock"));
         if (update_lock.exists()) {
             auto [timestamp, from, to, target, data_path] = read_lock_File(update_lock.absoluteFilePath());
             auto infoMsg = tr("This installation has a update lock file present at: %1\n"
